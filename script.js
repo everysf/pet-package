@@ -1,54 +1,76 @@
-
-var hidden = true;
-
-$(document).on("click", "#hideShow", function (){
-   hideShow();
-});
-
-$(document).on("click", ".animal-pick", function() {
-    hideShow();
-})
+function reloadHome(){
+    location.reload();
+}
 
 function stopVideo() {
-    $("#dogVideo").css("animation", "2s hideVid")
+    setTimeout(function(){
+        $("#dogVideo").css("animation", "1s fadeOut forwards")
+        $('.picturesWrap').css("animation", "1s picturesShow forwards")
+    }, 2000)
     setTimeout(function(){
         $("#dogVideo").hide()
-    }, 1800)
+    }, 3000)
+
 }
 
-function hideShow() {
-    var toolbar = $("#toolbarRender");
-    var searchBar = $("#picturesRender");
-    if(!hidden){ 
-        toolbar.css("top", "-104px");
-        searchBar.css("bottom", "230px");
-        $(".picturesWrap").css("display", "flex");
-        $("#hider").text("SHOW");
-        $("#hider").css("background-color", "#424874");
-        $("#hider").css("color", "white");
-        hidden = true;
+function alertZip() {
+    $(".alertZip").show()
+    $(".alertZip").css("animation", "1s fadeIn forwards")
+}
+
+function hideZip() {
+    $(".alertZip").css("animation", "1s fadeOut forwards")
+    $(".alertZip").hide()
+}
+
+function enterSite() {
+    if ($("#location-input").val().length === 5) {
+        $(".container1").css("animation", "1s modalFade forwards")
+        var enter = setTimeout(function(){$(".container1").hide()}, 1000)
+        stopVideo()
+    } else {
+        alertZip()
     }
-    else if(hidden){
-        toolbar.css("top", "0px");
-        searchBar.css("bottom", "0px");
-        $("#hider").css("background-color", "rgba(255,255,255,.0)");
-        $("#hider").css("color", "#424874");
-        $("#hider").text("HIDE");
-        hidden = false;
-    }
 }
 
-function hideLanding() {
-    $(".landingWrap").hide()
-    $("#modalCover").hide()
-    hideShow()
+$(document).on("click", "#submit", function() {
+    enterSite()
+})
+
+
+$(document).on("click", ".alertZip", function() {
+    hideZip()
+})
+
+
+function hidePictures() {
+    $(".picturesWrap").css("animation", "1s picturesHide forwards")
 }
 
-$(document).on("click", "#searchPets", function() {
-   
-    var toolbar = $("#toolbarRender");
-    hideLanding();
-    toolbar.css("top", "0px");
+function showInfo() {
+    $(".petInfo").css("animation", "1s infoShow forwards");
+}
 
+function showPictures() {
+    $(".picturesWrap").css("animation", "1s picturesShow forwards")
+}
+
+function hideInfo() {
+    $(".petInfo").css("animation", "1s infoHide forwards");
+}
+
+$(document).on("click", ".thumbnail", function() {
+    hidePictures()
+    showInfo()
+})
+
+$(document).on("click", "#backToSearch", function() {
+    hideInfo()
+    showPictures()
+})
+
+$(document).on("click", ".adjustSearch", function() {
+    hidePictures()
+    reloadHome()
 })
 

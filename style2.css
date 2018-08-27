@@ -1,0 +1,261 @@
+@font-face {
+    font-family: Airplane;
+    src: url(assets/Airplane/Airplane.ttf);
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(assets/Avenir.ttc);
+}
+
+body {
+    font-family: Avenir;
+    overflow: hidden;
+    background-color: #D7DEE2;
+}
+
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 600px;
+    z-index: 30;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logoBox {
+    background-image: url(img/petpackage\ design-04.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+    background-color: #7A8B99;
+}
+
+.container1 #submit {
+    display: flex;
+    flex-direction: column;
+}
+
+.container1 #submit img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.container1 #submit h4 {
+    text-align: center;
+}
+
+.container1 .form {
+    padding: 20px;
+}
+
+.container1 .inputChunk {
+    padding: 10px;
+}
+
+.container1 h4 {
+    padding-bottom: 10px;
+}
+
+.container1 .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#location-input {
+    padding: 9px;
+    font-size: 16px;
+    width: 130px;
+}
+
+#submit {
+    margin: 20px 10px 10px 10px;
+}
+
+#submit h4 {
+    margin-top: 10px;
+}
+
+.description {
+    padding: 30px 30px 10px 30px;
+}
+
+.description p {
+    text-align: center;
+}
+
+#dogVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100%;
+    z-index: 1;
+}
+
+#mapRender {
+    z-index: 20;
+}
+
+#google-map {
+    min-height: 100%;
+    min-width: 100%;
+    margin-top: 23px;
+}
+
+.alertZip {
+    animation: 1s modalFade forwards;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.alertZip h1 {
+    border-top: 15px solid #7A8B99;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 70px;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+
+.modalCover {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 99;
+    display: none;
+}
+
+.picturesWrap {
+    width: 575px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+    left: -595px;
+}
+
+.thumbnail {
+    width: 170px;
+    height: 220px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.thumbnail h4 {
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 170px;
+    text-align: center;
+
+}
+
+.thumbnail img {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.petInfo {
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 100vh;
+    z-index: 100;
+    right: -320px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+.petCard {
+    width: 280px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -58%);
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.petCard .crop {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.petCard img {
+    min-width: 100%;
+    min-height: 300px;
+}
+
+.petCard h4 {
+    padding: 10px;
+}
+
+.petCard .text {
+    padding: 20px 20px 0px 20px;
+}
+
+.mapButton {
+    color: white;
+    background-color: #7A8B99;
+    border-radius: 5px;
+    margin: 10px 20px;
+    padding: 3px;
+    text-align: center;
+}
+
+.mapButton2 {
+    color: white;
+    background-color: #91ADC2;
+    border-radius: 5px;
+    margin: 10px 20px 20px 20px;
+    padding: 3px;
+    text-align: center;
+}
+
+#mapRender {
+    height: 100vh
+}
+
+#mapRender iframe {
+    margin: 0;
+}
+
+.adjustSearch {
+    color: white;
+    background-color: #7A8B99;
+    border-radius: 5px;
+    margin: 10px 10px 30px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}

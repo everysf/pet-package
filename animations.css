@@ -1,0 +1,63 @@
+@keyframes modalFade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 48%;
+    }
+}
+
+@kewyFrames fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes picturesShow {
+    0% {
+        left: -595px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes picturesHide {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -595px;
+    }
+}
+
+@keyframes infoShow {
+    0% {
+        right: -320px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes infoHide {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -320px;
+    }
+}
