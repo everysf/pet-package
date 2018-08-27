@@ -17,6 +17,7 @@ var animalType;
 var address;
 
 $(document).on("click", "#submit", function(event){
+    if ($("#location-input").val().length === 5) {
     event.preventDefault();
     
     var zip = $("#location-input").val();
@@ -113,6 +114,7 @@ $(document).on("click", "#submit", function(event){
             phoneNum: phoneArr 
         })
     })
+}
 })
 
 $(document).on("click", ".thumbnail", function(event){
